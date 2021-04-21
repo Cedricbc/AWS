@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $movies = Movies::orderBy('created_at', 'desc')->get();
         $movieCount = $movies->count();
+        
         return view('admin.dashboard',compact('movies','movieCount'));
     }
 }

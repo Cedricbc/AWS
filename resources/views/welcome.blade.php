@@ -21,7 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative flex items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            <h2> Movie Database</h2>
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -36,24 +37,32 @@
                 </div>
             @endif
 
-            <div class="max-w-12xl mx-auto sm:px-12 lg:px-12">
-              <div class="row ">
+           
+        </div>
+         
+            <div class="row">
+                @if (!empty($movies))
                     @foreach($movies as $movie)
-                    <div class="col-md-3" style="margin:10px">
+                    <div class="col-md-3 col-lg-3 col-sm-3" style="margin:20px">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <img class="card-img-top" style="width:200px;height:200px" src="{{ $movie->movie_image }}" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $movie->movie_name}}</h5>
-                                <p class="card-text">{{$movie->description }}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title text-center">{{ $movie->movie_name}}</h5>
+                                <p class="card-text " style="align-content:space-around">{{ $movie->movie_description }}</p>
+                                <button class="btn btn-success">More</>
                             </div>
                         </div>
                     </div>
                     @endforeach
+                @else
+                    <div class="col-md-3 justify-center" style="margin:10px">
+                        <h5 class="card-title">No Movies available</h5>
+                        
+                    </div>
+                @endif
                 </div>
 
             </div>
-        </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

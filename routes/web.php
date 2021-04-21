@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $movies = App\Models\Movies::orderBy('created_at', 'desc')->get();
+    //dd($movies);
     return view('welcome',compact('movies'));
 })->name('index');
 
