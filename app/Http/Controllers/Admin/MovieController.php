@@ -40,7 +40,7 @@ class MovieController extends Controller
             $name =  'movie_image.'.str_replace(' ','_',Carbon::now()).$file->getClientOriginalExtension();  
             
             try{
-                Storage::disk('public')->putFileAs('Documents/', $file,$name);
+                Storage::disk('s3')->putFileAs('Documents/', $file,$name);
             }catch(\Exception $e)
             {
                 dd($e->getMessage());

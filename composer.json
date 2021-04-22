@@ -15,6 +15,7 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "league/flysystem-aws-s3-v3": "~1.0",
         "oriceon/toastr-5-laravel": "^1.0"
     },
     "require-dev": {
