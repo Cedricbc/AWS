@@ -37,7 +37,7 @@ class MovieController extends Controller
         if($request->hasFile('movie_image')){
             
             $file = $request->file('movie_image');
-            $name =  'movie_image.'.str_replace(' ','_',Carbon::now()).$file->getClientOriginalExtension();  
+            $name =  str_replace(' ','_',$request->movie_name).'.'.$file->getClientOriginalExtension();  
             
             try{
                 Storage::disk('public')->putFileAs('Documents/', $file,$name);
