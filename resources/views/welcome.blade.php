@@ -1,68 +1,122 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!-- saved from url=(0022)http://87.106.169.253/ -->
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" hre="{{ asset('css/app.css') }}"></link>
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" href="{{asset('/favicon.ico') }}"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="#000000">
+        <meta name="description" content="Vaccination verification web application"><link rel="apple-touch-icon" href="{{ asset('images/verify.png') }} ">
+        <!-- <link rel="manifest" href="http://87.106.169.253/verify.webmanifest"> -->
+        <title>Vaccine certificate access portal</title>
+        <link href="{{ asset('css/2.713895d0.chunk.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/main.6aa0e7a1.chunk.css') }}" rel="stylesheet">
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <h2> Movie Database</h2>
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endauth
+<body>
+    <noscript>You need to enable JavaScript to download vaccine certificate.</noscript>
+    <div id="root">
+        <div class="">
+            <nav class="navbar navbar-expand navbar-light bg-white fixed-top"><a href="{{ url('/')}}" class="navbar-brand"><img src="data:image/png;base64,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" width="200" class="d-inline-block align-top" alt="React Bootstrap logo"></a>
+                <button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-end navbar-collapse collapse" id="basic-navbar-nav">
+                    <div class="navbar-nav"></div>
                 </div>
-            @endif
-
-           
-        </div>
-         
-            <div class="row">
-                @if (!empty($movies))
-                    @foreach($movies as $movie)
-                    <div class="col-md-3 col-lg-3 col-sm-3" style="margin:20px">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" style="width:200px;height:200px" src="{{ $movie->movie_image }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">{{ $movie->movie_name}}</h5>
-                                <p class="card-text " style="align-content:space-around">{{ $movie->movie_description }}</p>
-                                <button class="btn btn-success">More</>
+            </nav>
+            <div style="padding-bottom: 6rem; padding-top: 3rem;">
+                <div class="home-section">
+                    <div class="section ">
+                        <div class="d-flex flex-column" style="height: 100%;">
+                            <div class="p-4 p-lg-5 d-flex flex-column justify-content-center align-items-center"><h3>Welcome to the</h3><span class="title">Digital Infrastructure for Vaccination &amp; Open Certification Portal</span>
+                                <div class="d-flex justify-content-center mb-3 row">
+                                    <div class="col-lg-4">
+                                    <div class="d-flex flex-column justify-content-center align-items-center pb-3 pl-4 pr-4 pt-0 mt-3" style="width: 100%; height: 50vh; background-color: rgb(248, 251, 255); border-radius: 20px;">
+                                        <div class="d-inline-flex justify-content-center" style="height: 30%;"><img src="{{ asset('images/download-certificate-home.4fd763a2.svg') }}" alt="" width="80%"></div><div style="height: 50%;"><h4 class="text-center mt-3">Download your Vaccination Certificate</h4><p class="text-center mt-3">You would need your Aadhaar number and Mobile number to verify OTP in order to access your digital certificate.</p></div>
+                                        <div style="height: 20%;"><button class="custom-button blue-btn">Download</button></div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex flex-column justify-content-center align-items-center pb-3 pl-4 pr-4 pt-0 mt-3" style="width: 100%; height: 50vh; background-color: rgb(242, 250, 246); border-radius: 20px;">
+                                            <div class="d-inline-flex justify-content-center" style="height: 30%;"><img src="{{ asset('images/verify-certificate-home.74316aaf.svg') }}" alt="" width="80%"></div><div style="height: 50%;"><h4 class="text-center mt-3">Verify your Vaccination Certificate</h4><p class="text-center mt-3">Ensure that your vaccination certificate is a authentic by digitally verifying it here.</p></div><div style="height: 20%;"><button class="custom-button green-btn">Verify</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex flex-column justify-content-center align-items-center pb-3 pl-4 pr-4 pt-0 mt-3" style="width: 100%; height: 50vh; background-color: rgb(255, 251, 240); border-radius: 20px;">
+                                            <div class="d-inline-flex justify-content-center" style="height: 30%;"><img src="{{ asset('images/side-effects-banner-img.d842daa0.png') }}" alt="" width="60%"></div>
+                                            <div style="height: 50%;"><h4 class="text-center mt-3">Provide Feedback</h4><p class="text-center mt-3">By reporting any side-effects of the vaccine, you will ensure the safety of others in the community and help the government contain the pandemic effectively.</p></div>
+                                            <div style="height: 20%;"><button class="custom-button yellow-btn">Report Side-effects</button></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-lg-3">
+                                        <div class="d-flex flex-column justify-content-center align-items-center pb-3 pl-4 pr-4 pt-0 mt-3" style="width: 100%; height: 50vh; background-color: rgb(248, 250, 255); border-radius: 20px;">
+                                            <div class="d-inline-flex justify-content-center" style="height: 30%;"><img src="{{ asset('images/leanr_more.31ce4dab.png') }}" alt="" width="60%"></div><div style="height: 50%;"><h4 class="text-center mt-3">Learn</h4><p class="text-center mt-3">The C-19 vaccination drive launched in India in 2021 aims to control, reduce and eradicate the prevalence of Covid in India. These videos will help you understand the program and learn about side-effect post vaccination.</p></div>
+                                            <div style="height: 20%;"><button class="custom-button purple-btn">Learn</button></div>
+                                        </div>
+                                    </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                @else
-                    <div class="col-md-3 justify-center" style="margin:10px">
-                        <h5 class="card-title">No Movies available</h5>
-                        
-                    </div>
-                @endif
+                 
+                   
                 </div>
-
+                <!-- <div class="updates-section p-3 p-lg-0 d-none">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="font-weight-bold">Latest Updates</span>
+                        <span class="d-flex align-items-center" style="cursor: pointer;">View All Updates <span class="latest-update-nav-btn ml-2 pl-1 pr-1">&gt;</span></span>
+                    </div>
+                    <div class="carousel">
+                        <div class="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal" aria-live="polite" tabindex="0" role="listbox">
+                            <div class="carousel__slider-tray-wrappe carousel__slider-tray-wrap--horizontal">
+                                <ul class="sliderTray___-vHFQ sliderAnimation___300FY carousel__slider-tray carousel__slider-tray--horizontal" style="width: 150%; transform: translateX(0%) translateX(0px); flex-direction: row;">
+                                    <li tabindex="0" aria-selected="true" role="option" class="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible" style="width: 33.3333%; padding-bottom: 13.3333%;">
+                                        <div class="slideInner___2mfX9 carousel__inner-slide">
+                                            <div class="d-flex flex-row m-3 p-3 update-card">
+                                                <div class="d-flex flex-column align-items-center"><span class="card-date font-weight-bold">13</span><span class="card-author">Oct</span></div>
+                                                <div class="d-flex flex-column pl-5 pr-5"><span class="card-author">Author or update from</span><span class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ...</span><a href="http://87.106.169.253/" class="pt-3 d-flex align-items-center">Read More <span class="pl-1" style="font-size: 30px;"> &gt; </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li tabindex="0" aria-selected="true" role="option" class="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible" style="width: 33.3333%; padding-bottom: 13.3333%;">
+                                        <div class="slideInner___2mfX9 carousel__inner-slide">
+                                            <div class="d-flex flex-row m-3 p-3 update-card">
+                                                <div class="d-flex flex-column align-items-center"><span class="card-date font-weight-bold">13</span><span class="card-author">Oct</span></div>
+                                                <div class="d-flex flex-column pl-5 pr-5"><span class="card-author">Author or update from</span><span class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ...</span><a href="http://87.106.169.253/" class="pt-3 d-flex align-items-center">Read More <span class="pl-1" style="font-size: 30px;"> &gt; </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li tabindex="-1" aria-selected="false" role="option" class="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden" style="width: 33.3333%; padding-bottom: 13.3333%;">
+                                        <div class="slideInner___2mfX9 carousel__inner-slide">
+                                            <div class="d-flex flex-row m-3 p-3 update-card">
+                                                <div class="d-flex flex-column align-items-center"><span class="card-date font-weight-bold">13</span><span class="card-author">Oct</span></div>
+                                                <div class="d-flex flex-column pl-5 pr-5"><span class="card-author">Author or update from</span><span class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ...</span><a href="http://87.106.169.253/" class="pt-3 d-flex align-items-center">Read More <span class="pl-1" style="font-size: 30px;"> &gt; </span></a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" aria-label="next" class="buttonNext___2mOCa carousel__next-button latest-update-nav-btn float-right mt-3 ml-1">&gt;</button><button type="button" aria-label="previous" class="buttonBack___1mlaL carousel__back-button latest-update-nav-btn float-right mt-3 ml-1" disabled="">&lt;</button>
+                    </div>
+                </div> -->
             </div>
-        <script src="{{ asset('js/app.js') }}"></script>
-    </body>
+        </div>
+        <nav class="Footer_navbar__jhaJN navbar navbar-expand navbar-light bg-white">
+            <span class="navbar-brand"></span>
+            <button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
+            <div class="justify-content-end navbar-collapse collapse" id="basic-navbar-nav">
+                <div class="navbar-nav"><a href="http://87.106.169.253/#contact" data-rb-event-key="#contact" class="nav-link">Contact Us</a><a href="http://87.106.169.253/#terms" data-rb-event-key="#terms" class="nav-link">Term of use</a><a href="http://87.106.169.253/#policy" data-rb-event-key="#policy" class="nav-link">Privacy policy</a></div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- <script>
+!function(e){function t(t){for(var n,a,i=t[0],c=t[1],f=t[2],p=0,s=[];p<i.length;p++)a=i[p],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(l&&l(t);s.length;)s.shift()();return u.push.apply(u,f||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,i=1;i<r.length;i++){var c=r[i];0!==o[c]&&(n=!1)}n&&(u.splice(t--,1),e=a(a.s=r[0]))}return e}var n={},o={1:0},u=[];function a(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,a),r.l=!0,r.exports}a.e=function(e){var t=[],r=o[e];if(0!==r)if(r)t.push(r[2]);else{var n=new Promise((function(t,n){r=o[e]=[t,n]}));t.push(r[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"f6deb4a4"}[e]+".chunk.js"}(e);var c=new Error;u=function(t){i.onerror=i.onload=null,clearTimeout(f);var r=o[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),u=t&&t.target&&t.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,r[1](c)}o[e]=void 0}};var f=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(t)},a.m=e,a.c=n,a.d=function(e,t,r){a.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,t){if(1&t&&(e=a(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(a.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)a.d(r,n,function(t){return e[t]}.bind(null,n));return r},a.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(t,"a",t),t},a.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this.webpackJsonpcertificate_app=this.webpackJsonpcertificate_app||[],c=i.push.bind(i);i.push=t,i=i.slice();for(var f=0;f<i.length;f++)t(i[f]);var l=c;r()}([])
+</script> -->
+<script src="{{ asset('js/2.8140f32d.chunk.js') }}"></script>
+<script src="{{ asset('js/main.82f5e048.chunk.js') }}"></script>
+<iframe src="{{ asset('iframes/login-status-iframe.html') }}" title="keycloak-session-iframe" style="display: none;"></iframe>
+</body>
 </html>
