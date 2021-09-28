@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Movies;
+use App\Models\Patient;
+use App\Models\Agent;
+use App\Models\Vaccine;
 
 class HomeController extends Controller
 {
@@ -25,9 +27,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $movies = Movies::orderBy('created_at', 'desc')->get();
-        $movieCount = $movies->count();
+        $patients = Patient::orderBy('created_at', 'desc')->get();
+        $patientsCount = $patients->count();
         
-        return view('admin.dashboard',compact('movies','movieCount'));
+        $agents = Agent::orderBy('created_at', 'desc')->get();
+        $agentsCount = $agents->count();
+        
+        $vaccines = Vaccine::orderBy('created_at', 'desc')->get();
+        $vaccineCount = $vaccines->count();
+        
+        return view('admin.dashboard',compact('patients','patientsCount','agents','agentsCount','vaccines','vaccineCount'));
+    }
+
+    public function settings(){
+        return view('admin.settings');
     }
 }

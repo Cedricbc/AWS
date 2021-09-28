@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{ route('admin.dashboard') }}" class="brand-link">
       <!--
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       -->
@@ -39,6 +39,47 @@
             </a>
             
           </li>
+          <li class="nav-item ">
+            <a href="{{ route('admin.agents') }}" class="nav-link ">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Agents
+                
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item ">
+            <a href="{{ route('admin.patients') }}" class="nav-link ">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Register a Patient
+                
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item ">
+            <a href="{{ route('admin.vaccines') }}" class="nav-link ">
+              <i class="nav-icon fas fa-syringe"></i>
+              <p>
+                List Of Vaccines
+                
+              </p>
+            </a>
+            
+          </li>
+           <li class="nav-item ">
+            <a href="{{ route('admin.settings') }}" class="nav-link ">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Settings
+                
+              </p>
+            </a>
+            
+          </li>
+          
           
         </ul>
       </nav>

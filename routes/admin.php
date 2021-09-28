@@ -14,6 +14,11 @@ Route::prefix('admin')->group(function(){
 
     Route::get('/dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.dashboard');
     
+    Route::get('/agents', [App\Http\Controllers\Admin\AgentController::class, 'index'])->name('admin.agents');
+    Route::get('/patients', [App\Http\Controllers\Admin\PatientController::class, 'index'])->name('admin.patients');
+    Route::get('/vaccines', [App\Http\Controllers\Admin\VaccineController::class, 'index'])->name('admin.vaccines');
+    Route::get('/settings', [App\Http\Controllers\Admin\HomeController::class, 'settings'])->name('admin.settings');
+
     Route::get('/dashboard/movie/add' ,[App\Http\Controllers\Admin\MovieController::class, 'add'])->name('admin.movie.add');  
     Route::post('/dashboard/movie/add' ,[App\Http\Controllers\Admin\MovieController::class, 'store'])->name('admin.movie.add');   
     
